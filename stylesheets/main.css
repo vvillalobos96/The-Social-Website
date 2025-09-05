@@ -1,0 +1,156 @@
+/*
+    Font families:
+    Headers: Barlow Condensed, sans-serif
+    Sub Headers: Montserrat, sans-serif
+    Paragraphs: Roboto Condensed, sans-serif
+
+    Brand Colors:
+    Blue: #0021A5
+    Orange: #CA6C18
+    Gray: #8D8F84
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #000000;
+}
+
+menu {
+    display: block;
+    width: 100%;
+    height: 7%;
+    margin: 0;
+}
+
+menu ul {
+    float: right;
+}
+
+menu li{
+    list-style-type: none;
+    display: inline;
+}
+
+menu li a{
+    color: #CA6C18;
+    text-decoration: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+    margin: auto;
+    padding: 20px;
+    display: inline-block;
+}
+
+.neonText {
+  color: #fff;
+  text-shadow:
+      0 0 7px #fc871e,
+      0 0 10px #fc871e,
+      0 0 21px #fc871e,
+      0 0 42px #CA6C18,
+      0 0 82px #CA6C18,
+      0 0 92px #CA6C18,
+      0 0 102px #CA6C18,
+      0 0 151px #CA6C18;
+}
+
+a:hover {
+    color: #fff;
+    text-shadow:
+      0 0 15px #fc871e,
+      0 0 18px #fc871e,
+      0 0 29px #fc871e,
+      0 0 50px #CA6C18,
+      0 0 90px #CA6C18,
+      0 0 100px #CA6C18,
+      0 0 110px #CA6C18,
+      0 0 159px #CA6C18;
+}
+
+.dropFrom {
+    display: inline-block;
+    position: relative;
+}
+
+.drop {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: #000000;
+}
+
+.dropFrom:hover .drop {
+    display: block;
+}
+
+.headline {
+    width: 98.75vw;
+}
+
+h1 {
+    color: #CA6C18;
+    font-family: Barlow Condensed, sans-serif;
+    text-align: center;
+    padding: 10px;
+}
+
+p, label, legend, a {
+    color: white;
+}
+
+p, label, legend, input, textarea, a {
+    margin: 10px;
+    font-size: 20px;
+    font-family: Roboto Condensed, sans-serif;
+    text-align: center;
+}
+
+footer ul {
+    text-align: center;
+}
+
+footer li{
+    list-style-type: none;
+    display: inline-block;
+}
+
+footer ul li:hover {
+    transform:scale(130%);
+    transition: ease;
+    transition-delay: 0;
+    transition-duration: 1.5s;
+}
+
+footer {
+    padding: 40px;
+}
+
+@media (max-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        width: 100%;
+    }
+    
+    h1, footer {
+        padding: 0;
+    }
+    
+    p, label, legend, input, textarea, a {
+        margin: 0;
+    }
+    
+    menu {
+        display: none;
+    }
+    
+    .headline {
+        width: 100%;
+    }
+}

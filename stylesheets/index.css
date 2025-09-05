@@ -1,0 +1,105 @@
+main {
+    display: grid;
+    grid-template-areas: 
+        "a b b c d"
+        "e f g g h"
+        "i j j k l"
+        "m n o o p"
+        "q r r s t";
+}
+
+.paragraphs {
+    display: block;
+    margin-top: 5vh;
+}
+
+main {
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+main img {
+    width: 630px;
+    margin: 3px;
+}
+
+#p1 {
+    grid-area: b;
+}
+
+#slide1 {
+    grid-area: c;
+}
+
+#collegeInn2 {
+    display: none;
+}
+
+#slide1:hover>#collegeInn2 {
+    display: block;
+}
+
+#slide1:hover>#collegeInn {
+    display: none;
+}
+
+#p2 {
+    grid-area: g;
+}
+
+#purplePorpoise {
+    grid-area: f;
+}
+
+#p3 {
+    grid-area: j;
+}
+
+#envy {
+    grid-area: k;
+}
+
+#p4 {
+    grid-area: o;
+}
+
+#gatorCity {
+    grid-area: n;
+}
+
+#p5 {
+    grid-area: r;
+}
+
+#social {
+    grid-area: s;
+}
+
+
+
+/*testing arrow div css stuff
+.arrows {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 5px #0021A5;
+    height: 4px;
+}
+
+.aBody {
+    width: 150px;
+    position: absolute;
+}
+
+.aHead1 {
+    width: 20px;
+    position: relative;
+    transform: rotate(45deg);
+    
+}
+
+.aHead2 {
+    width: 20px;
+    position: relative;
+    transform: rotate(135deg);
+    top: 6px;
+}*/

@@ -1,0 +1,100 @@
+a {
+    margin: 0;
+    display: block;
+    text-decoration: none;
+}
+
+h3 {
+    color: white;
+    font-family: Roboto Condensed, sans-serif;
+    text-align: center;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-template-rows: 1fr, 1fr, 1fr;
+    column-gap: 30px;
+    grid-row-gap: 30px;
+    justify-content: center;
+}
+
+fieldset {
+    padding: 10px;
+    justify-content: center;
+    box-shadow: 0 0 10px 5px #0021A5;
+}
+
+.food {
+    grid-area: 1, 1;
+}
+
+.drinks {
+    grid-area: 1, 2;
+}
+
+.events {
+    grid-area: 2, 1;
+}
+
+.contact {
+    grid-area: 2, 2;
+}
+
+.hours {
+    grid-area: 3, 1;
+}
+
+.employment {
+    grid-area: 3, 2;
+}
+
+p {
+    overflow: wrap;
+}
+
+.menu {
+    height: 325px;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.foodBG {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), black), url('../images/foodCap.PNG');
+}
+
+.drinkBG {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), black), url('../images/drinkCap.PNG');
+}
+
+li a{
+    color: #CA6C18;
+    text-decoration: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+    margin: auto;
+    padding: 20px;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    fieldset {
+        padding: 0;
+        width: 300px;
+        margin: auto;
+    }
+    
+    li a {
+        padding: 0;
+    }
+    
+    fieldset {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 5px;
+    }
+    
+    #content {
+        display: block;
+    }
+}

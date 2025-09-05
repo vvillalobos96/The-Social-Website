@@ -1,0 +1,23 @@
+.menu {
+    margin: auto;
+    height: 650px;
+    width: 75%;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.foodBG {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), black), url('../images/foodCap.PNG');
+}
+
+.drinkBG {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), black), url('../images/drinkCap.PNG');
+}
+
+.foodBG p {
+    padding-top: 180px;
+}
+
+.drinkBG p {
+    padding-top: 265px;
+}

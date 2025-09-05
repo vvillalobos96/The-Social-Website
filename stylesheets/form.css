@@ -1,0 +1,48 @@
+main {
+    display: grid;
+    grid-template-areas: 
+        "a b c"
+        "d e f"
+        "g h i";
+}
+
+.button {
+    display: block;
+    width: 140px;
+    height: 45px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.7s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+.button:hover {
+    background-color: #CA6C18;
+    box-shadow: 0 0 40px 20px #CA6C18;
+    /* in order: x offset, y offset, blur size, spread size, color */
+    /* blur size and spread size are optional (they default to 0) */
+}
+
+form {
+    padding-top: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#firstFS {
+    display: block;
+}
+
+#secondFS, #thirdFS, #fourthFS {
+    display: none;
+}
+
+form {
+    grid-area: b;
+}

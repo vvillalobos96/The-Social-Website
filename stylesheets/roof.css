@@ -1,0 +1,89 @@
+h1 {
+    grid-area: a;
+}
+
+#vid {
+    width: 80%;
+    margin: auto;
+    grid-area: b;
+}
+
+video {
+    width: 100%;
+}
+
+p {
+    grid-area: c;
+    padding: 20px;
+}
+
+main {
+    display: grid;
+    grid-template-areas: 
+        "a a"
+        "b b"
+        "c c"
+        "d e"
+        "f g";
+}
+
+.portrait {
+    width: 100%;
+}
+
+.landscape {
+    height: 100%;
+}
+
+figure {
+    background-color: white;
+    width: 540px;
+    padding-bottom: 20px;
+    margin: auto;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+#first {
+    left: 100px;
+    top: 30px;
+    transform: rotate(-5deg);
+}
+
+#second {
+    top: 40px;
+    right: 100px;
+    z-index: 1;
+    transform: rotate(13deg);
+}
+
+#third {
+    top: 35px;
+    transform: rotate(15deg);
+}
+
+#fourth {
+    right: 180px;
+    top: 20px;
+    transform: rotate(-8deg);
+}
+
+/*ON HOVER*/
+#first:hover, #second:hover, #third:hover, #fourth:hover {
+    z-index: 2;
+    transform: rotate(0);
+    transition: ease 3s;
+}
+
+.box {
+    margin: 20px;
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+}
+
+figcaption {
+    font-size: 21px;
+    font-family: Roboto Condensed, sans-serif;
+    text-align: center;
+}

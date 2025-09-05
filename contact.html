@@ -1,0 +1,191 @@
+<!--
+footer needs to be shrunken down
+move contact us and employment oppurtunities from menu to footer
+remove shitty stock photos
+adjust color scheme
+change logo to that other one
+remove redundancies (three separate links for employment oppurtunities??????????)
+-->
+<head>
+    <title>The Social at Midtown</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--LINKS FOR ROBOTO CONDENSED GOOGLE FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap">
+        
+    <!--LINKS FOR MONTSERRAT CLASSIC GOOGLE FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap">
+        
+    <!--LINKS FOR BARLOW CLASSIC GOOGLE FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&display=swap">
+        
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <link rel="stylesheet" href="stylesheets/form.css"> 
+    <script type="application/javascript" src="javascript/events.js"></script>
+</head>
+<body>
+    <menu>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li class="dropFrom">
+                <a href="menu.html">Menu</a>
+                <ul class="drop">
+                    <li>
+                        <a href="food.html">Food</a>
+                    </li>
+                    <li>
+                        <a href="drink.html">Drink</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="rooftop.html">Rooftop</a>
+            </li>
+            <li>
+                <a href="events.html">Events</a>
+            </li>
+            <li>
+                <a href="contact.html" class="neontext">Contact Us</a>
+            </li>
+            <li>
+                <a href="calendar.html">Calendar</a>
+            </li>
+        </ul>
+    </menu>
+    <header>
+        <img class="headline" src="images/shine.png">
+    </header>
+    <main>
+        <form action="actionPage.php" method="post">
+            <!--************************GENERAL ************************-->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name"><br>
+            <label for="return">E-Mail:</label>
+            <input type="text" id="return" name="return"><br>
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone"><br>
+            
+            <!--************************RADIO CONTROL************************-->
+            <input type="radio" id="events" name="reason" value="events" onclick="reasonSwitch(1)" checked="checked">
+            <label for="events">Event Inquiry</label>
+            <input type="radio" id="dispute" name="reason" value="dispute" onclick="reasonSwitch(2)">
+            <label for="dispute">CC Dispute</label>
+            <input type="radio" id="dono" name="reason" value="dono" onclick="reasonSwitch(3)">
+            <label for="dono">Donation Requests</label>
+            <input type="radio" id="qcc" name="reason" value="qcc" onclick="reasonSwitch(4)">
+            <label for="qcc">Questions/Comments/Concerns</label>
+            
+            <!--************************EVENTS************************-->
+            <!--restrict dates to two weeks out-->
+            <!--restrict end time to after start time-->
+            <fieldset id="firstFS">
+                <legend>Event Inquiry:</legend>
+                <p>Please keep in mind that all events must be scheduled prior to two weeks before the event date</p>
+                <label for="eventDay">Date:</label>
+                <input type="date" id="eventDay" name="eventDay">
+                <label for="start">Start Time:</label>
+                <input type="time" id="start" name="start">
+                <label for="end">End Time:</label>
+                <input type="time" id="end" name="end"><br>
+                <label for="num">Approximate number of guests (please include plus ones):</label>
+                <input type="range" id="num" name="num" min="10" max="800" step="10"><br>
+                <label for="area">Bar Area:</label>
+                <input list="area" name="area">
+                <datalist id="area">
+                    <option value="Rooftop Front">
+                    <option value="Rooftop Back">
+                    <option value="Downstair Main Bar">
+                    <option value="Downstairs Patio Bar">
+                    <option value="VIP">
+                    <option value="Resrved Dining">
+                </datalist><br>
+                <label for="feat">Features:</label><br>
+                <input type="checkbox" id="kitchServ" name="Kitchen Service" value="Kitchen Service">
+                <label for="kitchServ">Kitchen Service</label><br>
+                <input type="checkbox" id="catering" name="Catering" value="Catering">
+                <label for="catering">Buffet Style Catering</label><br>
+                <input type="checkbox" id="foodTruck" name="Food Truck" value="Food Truck">
+                <label for="foodTruck">Food Truck Service</label><br>
+                <input type="checkbox" id="passed" name="Passed" value="Passed">
+                <label for="passed">Passed Hors D'oeuvres</label><br>
+                <input type="checkbox" id="aycd" name="AYCD" value="AYCD">
+                <label for="aycd">All You Can Drink</label><br>
+                <input type="checkbox" id="cash" name="Cash Bar" value="Cash Bar">
+                <label for="cash">Cash Bar</label><br>
+                <input type="checkbox" id="tix" name="Drink Tickets" value="Drink Tickets">
+                <label for="tix">Drink Tickets</label><br>
+                <label for="req">Special Requests:</label><br>
+                <textarea name="req" rows="10" cols="30">
+                </textarea>
+            </fieldset>
+            
+            <!--************************CC DISPUTE************************-->
+            <fieldset id="secondFS">
+                <legend>Credit Card Dispute:</legend>
+                <label for="ccDay">Date:</label>
+                <input type="date" id="ccDay" name="ccDay"><br>
+                <label for="imageUp">Photo of Statement or Receipt:</label>
+                <input type="file" id="imageUp" name="imageUp"><br>
+                <label for="disputeDet">Please provide more details:</label><br>
+                <textarea name="disputeDet" rows="10" cols="30">
+                </textarea>
+            </fieldset>
+
+            <!--************************DONATIONS************************-->
+            <fieldset id="thirdFS">
+                <legend>Donation/Sponsorship Request:</legend>
+                <label for="org">Name of Organization/Cause:</label>
+                <input type="text" id="org" name="org"><br>
+                <label for="donoDay">Date Needed:</label>
+                <input type="date" id="donoDay" name="donoDay"><br>
+                <label for="donoDet">Details:</label><br>
+                <textarea name="donoDet" rows="10" cols="30">
+                </textarea>
+            </fieldset>
+
+            <!--************************QCC************************-->
+            <fieldset id="fourthFS">
+                <legend>Questions, Comments, Concerns:</legend>
+                <label for="sugDet">Details:</label><br>
+                <textarea name="sugDet" rows="10" cols="30">
+                </textarea>
+            </fieldset>
+
+            <input type="submit" value="Submit" class="button" formaction="actionPage.php" method="post">
+        </form> <!--change value to specific submit text depending on the reason-->
+    </main>
+    <footer>
+    <!--Include contact us, employment oppurtunities, and socials-->
+        <ul>
+            <li>
+                <a href="https://www.instagram.com/thesocialgnv/?hl=en" target="_blank">
+                    <img src="images/icons/instagram.png">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/thesocialatmidtown" target="_blank">
+                    <img src="images/icons/facebook.png">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.tiktok.com/@thesocialatmidtown?_r=1&_d=dh4g2l5386hce1&language=en&sec_uid=MS4wLjABAAAA2Q_CS95FMoRDnMWDRFlItVW6XTq3GeuAkZFEAwUstDlHWYNF33tkUyTvSR5RZKMj&share_author_id=7066073001059435567&source=h5_m&u_code=d665ijkfdbi28c&timestamp=1657233023&user_id=6689918421930394630&sec_user_id=MS4wLjABAAAADmI96pIJxbTBoGJYipipcazP1n7Y_8fwDQ2uY0IjCfdi7zKF3sqdOR3Z_d4bVrsz&utm_source=email&utm_campaign=client_share&utm_medium=android&share_iid=7116545608277575467&share_link_id=a2428d13-3379-403e-9e0d-a9144ba1e8de&share_app_id=1233&ugbiz_name=Account" target="_blank">
+                    <img src="images/icons/tiktok.png">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.workstream.us/j/grog_house_and_social_midtown_llc_the_social_at_midtown?referer_source=https://thesocialgnv.com/" target="_blank">
+                    <img src="images/icons/apply.png">
+                </a>
+            </li>
+        </ul>
+        <a href=""><H5>1728 W University Ave, Gainesville, FL 32603</H5></a>
+    </footer>
+</body>
